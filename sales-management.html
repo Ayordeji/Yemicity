@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bakery Sales Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <a href="index.html" class="btn secondary">Home</a>
+                <a href="set-stock.html" class="btn secondary">Set Daily Stock</a>
+            </nav>
+            <h1>Manage Bakery Sales</h1>
+        </header>
+        <main>
+            <form id="sales-form" class="form">
+                <label for="sales-type">Bread Type:</label>
+                <select id="sales-type"></select>
+                <label for="sales-quantity">Quantity Sold:</label>
+                <input type="number" id="sales-quantity" min="0" class="input">
+                <button type="submit" class="btn primary">Record Sale</button>
+            </form>
+            <section>
+                <h2>Sales Records</h2>
+                <table id="sales-table" class="table">
+                    <thead>
+                        <tr>
+                            <th>Bread Type</th>
+                            <th>Price</th>
+                            <th>Quantity Sold</th>
+                            <th>Total Sale</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </section>
+            <section>
+                <h2>Stock Left</h2>
+                <table id="stock-left-table" class="table">
+                    <thead>
+                        <tr>
+                            <th>Bread Type</th>
+                            <th>Stock Left</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </section>
+            <button id="download-btn" class="btn secondary">Download CSV</button>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

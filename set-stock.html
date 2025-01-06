@@ -8,34 +8,36 @@
   </head>
   <body>
     <div class="container">
-      <h1>Set Daily Stock</h1>
-      <form id="set-stock-form" class="form">
-        <label for="stock-type">Bread Type:</label>
-        <select id="stock-type" required></select>
-
-        <label for="stock-quantity">Quantity:</label>
-        <input type="number" id="stock-quantity" placeholder="Enter quantity" required min="0" />
-
-        <button type="submit">Set Stock</button>
-      </form>
-
-      <h2>Current Inventory</h2>
-      <table id="current-inventory" class="table">
-        <thead>
-          <tr>
-            <th>Bread Type</th>
-            <th>Price</th>
-            <th>Quantity</th>
-          </tr>
-        </thead>
-        <tbody>
-          <!-- Inventory rows will be dynamically populated -->
-        </tbody>
-      </table>
-
-      <a href="index.html" class="button">Go to Bakery Sales Management</a>
+      <header>
+        <nav>
+          <a href="index.html" class="btn secondary">Home</a>
+          <a href="sales-management.html" class="btn secondary">Manage Sales</a>
+        </nav>
+        <h1>Set Daily Stock</h1>
+      </header>
+      <main>
+        <form id="set-stock-form" class="form">
+          <label for="stock-type">Bread Type:</label>
+          <select id="stock-type"></select>
+          <label for="stock-quantity">Quantity:</label>
+          <input type="number" id="stock-quantity" min="0" class="input" />
+          <button type="submit" class="btn primary">Set Stock</button>
+        </form>
+        <section>
+          <h2>Current Inventory</h2>
+          <table id="current-inventory" class="table">
+            <thead>
+              <tr>
+                <th>Bread Type</th>
+                <th>Price</th>
+                <th>Stock Available</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </section>
+      </main>
     </div>
-
     <script src="script.js"></script>
   </body>
 </html>
